@@ -67,5 +67,8 @@
         &trans  &kp LEFT_GUI          &trans          &trans                             &trans        &trans     
             >;
         };
+        layer5 { status = "reserved"; };
+        layer6 { status = "reserved"; };
+        layer7 { status = "reserved"; };
     };
 };
