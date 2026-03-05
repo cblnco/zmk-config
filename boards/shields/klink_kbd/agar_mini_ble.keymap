@@ -1,12 +1,13 @@
 #include "./common/common.keymap"
 
+
 / {
     behaviors {
         numbersTap: numbersTap {
             compatible = "zmk,behavior-tap-dance";
             label = "NUMBERSTAP";
             #binding-cells = <0>;
-            bindings = <&lt 2 SPACE>, <&mo 3>;
+            bindings = <&kp LEFT_ALT>, <&mo 3>;
         };
 
         shiftHold: shiftHold {
@@ -25,10 +26,10 @@
 
         default_layer {
             bindings = <
-&gresc     &kp Q         &kp W             &kp E  &kp R        &kp T  &kp Y        &kp U  &kp I      &kp O      &kp P                    &kp BACKSLASH    &kp BSPC
-&kp TAB    &kp A         &kp S             &kp D  &kp F        &kp G  &kp H        &kp J  &kp K      &kp L      &kp SEMI                 &kp RET
-&kp LSHFT  &kp Z         &kp X             &kp C  &kp V        &kp B  &kp N        &kp M  &kp COMMA  &kp DOT    &shiftHold RSHIFT SLASH  &lt 4 RIGHT_GUI
-           &kp LEFT_ALT  &kp LEFT_CONTROL         &numbersTap         &lt 1 SPACE                    &kp RCTRL  &kp RIGHT_ALT
+&gresc     &kp Q        &kp W             &kp E  &kp R        &kp T  &kp Y        &kp U  &kp I      &kp O      &kp P                    &kp BACKSLASH    &kp BSPC
+&kp TAB    &kp A        &kp S             &kp D  &kp F        &kp G  &kp H        &kp J  &kp K      &kp L      &kp SEMI                 &kp RET
+&kp LSHFT  &kp Z        &kp X             &kp C  &kp V        &kp B  &kp N        &kp M  &kp COMMA  &kp DOT    &shiftHold RSHIFT SLASH  &lt 4 RIGHT_GUI
+           &numbersTap  &kp LEFT_CONTROL         &lt 2 SPACE         &lt 1 SPACE                    &kp RCTRL  &kp RIGHT_ALT
             >;
         };
 
@@ -52,19 +53,19 @@
 
         layer3 {
             bindings = <
-&trans  &kp F1  &kp F2  &kp F3  &kp F4   &kp F5        &kp F6        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans  &trans
-&trans  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11       &kp F12       &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
-&trans  &trans  &trans  &trans  &trans   &kp NUMBER_0  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans        &trans  &trans
-        &trans  &trans          &trans                 &trans                                    &trans        &trans
+&trans  &kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans  &trans
+&trans  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12       &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &trans  &trans
+&trans  &trans  &trans  &trans  &trans   &kp NUMBER_0   &kp NUMBER_7  &kp NUMBER_8        &kp NUMBER_9        &trans        &trans  &trans
+        &trans  &trans          &trans            &trans                                    &trans        &trans
             >;
         };
 
         layer4 {
             bindings = <
-&trans  &device_bt1 0 0        &device_bt2 0 1  &device_bt3 0 2  &trans  &trans  &trans  &trans  &trans             &trans        &trans      &trans  &trans
-&trans  &Device_USB            &trans           &trans           &trans  &trans  &trans  &trans  &trans             &trans        &trans      &trans
-&trans  &bootloader_reset 0 0  &trans           &trans           &trans  &trans  &trans  &trans  &kp C_VOLUME_DOWN  &kp C_VOL_UP  &kp K_MUTE  &trans
-        &trans                 &kp LEFT_GUI                      &trans          &trans                             &trans        &trans
+&trans  &device_bt1 0 0  &device_bt2 0 1  &device_bt3 0 2  &trans  &trans  &trans  &trans  &trans             &trans        &trans      &trans  &trans
+&trans  &Device_USB  &trans        &trans  &trans  &trans  &trans  &trans  &trans             &trans        &trans      &trans
+&trans  &bootloader_reset 0 0  &trans        &trans  &trans  &trans  &trans  &trans  &kp C_VOLUME_DOWN  &kp C_VOL_UP  &kp K_MUTE  &trans
+        &trans  &kp LEFT_GUI          &trans          &trans                             &trans        &trans     
             >;
         };
     };
