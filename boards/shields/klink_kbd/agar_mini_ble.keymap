@@ -6,7 +6,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "NUMBERSTAP";
             #binding-cells = <0>;
-            bindings = <&lt 2 SPACE>, <&mo 3>;
+            bindings = <&mo 2>, <&mo 3>;
         };
 
         shiftHold: shiftHold {
